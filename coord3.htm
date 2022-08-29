@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>Coordinate3</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="Microsoft Border" content="l">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+
+<h5><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" -->
+</h5>
+
+<h5><b>Purpose</b>: This
+node belongs to the geometry and appearance subgroup of the property <a href="nodes.htm">Nodes</a>.
+It defines a set of 3D coordinates to be used by a subsequent <a href="ifaceset.htm">IndexedFaceSet</a>,
+<a href="ilineset.htm">IndexedLineSet</a>, or <a href="pset.htm">PointSet node</a>.</h5>
+
+<h5><b>Syntax</b></h5>
+
+<p><kbd>FILE FORMAT/DEFAULTS<br>
+Coordinate3 {<br>
+point 0 0 0 # </kbd><a href="mfvec3f.htm"><kbd>MFVec3f</kbd></a><kbd><br>
+}</kbd></p>
+
+<h5><b>Explanation</b></h5>
+
+<p>This node doesn't really produce any immediately visible result during the scene
+rendering. Instead, rather, it replaces the current coordinates and provides new
+coordinates for subsequent nodes to use.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/bird.wrl">Bird.wrl</a>.</p>
+
+
+<pre><kbd>Coordinate3 {</kbd></pre>
+
+
+<pre><kbd>	point {</kbd></pre>
+
+
+<pre><kbd>		0.0 0.0 0.4,</kbd></pre>
+
+
+<pre><kbd>		1.8 0.0 0.3,</kbd></pre>
+
+
+<pre><kbd>		1.8 0.0 -0.3,</kbd></pre>
+
+
+<pre><kbd>		0.0 0.0 -0.4,</kbd></pre>
+
+
+<pre><kbd>		0.2 -1.0 0.0,</kbd></pre>
+
+
+<pre><kbd>		1.7 -0.8 0.0</kbd></pre>
+
+
+<pre><kbd>	}</kbd></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h6><b>See Also</b></h6>
+
+<p><a href="ifaceset.htm"><em>IndexedFaceSet</em></a><em>, </em><a href="ilineset.htm"><em>IndexedLineSet</em></a><em>,
+</em><a href="pset.htm"><em>PointSet</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 22, 2001 04:49 PM<!--webbot bot="TimeStamp" endspan i-checksum="29286" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

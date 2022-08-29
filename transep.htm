@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>TransformSeparator</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 1.1">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm">
+
+
+<h4>TransformSeparator</h4>
+
+<h5><b>Purpose</b>: This
+node is one of the six group <a href="nodes.htm">Nodes</a>. The TransformSeparator node is
+similar to the <a href="separate.htm">Separator </a>node.</h5>
+
+<h5><b>Syntax</b> </h5>
+
+<p><kbd>FILE FORMAT/DEFAULTS</kbd></p>
+
+<p><kbd>TransformSeparator {}</kbd></p>
+
+<h5><b>Explanation</b></h5>
+
+<p>As suggested above the TransformSeparator node is similar in use to the <a
+href="separate.htm">Separator</a> node. This node also saves state before traversing its
+children and restoring it afterwards. However, TransformSeparator saves only the current
+transformation. The rest of the state condition is left as is.</p>
+
+<p>You can use this node for positioning a camera in your world. The transformations to
+the camera will not affect the rest of the scene. You can also use this node to isolate
+transformations to light sources or other objects.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/corner.wrl">Corner.wrl</a>.</p>
+
+<p><kbd>TransformSeparator {}</kbd></p>
+
+<h6><b>See Also</b></h6>
+
+<p><a href="separate.htm"><em>Separator</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 21, 2001 12:51 PM<!--webbot
+bot="TimeStamp" endspan i-checksum="29000" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+</body>
+</html>

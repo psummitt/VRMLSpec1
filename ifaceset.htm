@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>IndexedFaceSet</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="Microsoft Border" content="l">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+
+<h4><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" -->
+</h4>
+
+<h5><b>Purpose</b>: This
+node is one of the shape <a href="nodes.htm">Nodes</a> group. This node provides you with
+a 3D shape formed by constructing faces, or polygons, from vertices located at the current
+coordinates.</h5>
+
+<h5><b>Syntax</b></h5>
+
+
+<pre><kbd>FILE FORMAT/DEFAULTS
+IndexedFaceSet {
+	coordIndex		 0	# </kbd><a href="mflong.htm"><kbd>MFLong</kbd></a><kbd>
+	materialIndex		-1	# </kbd><a href="mflong.htm"><kbd>MFLong</kbd></a><kbd>
+	normalIndex		-1	# </kbd><a href="mflong.htm"><kbd>MFLong</kbd></a><kbd>
+	textureCoordIndex	-1	# </kbd><a href="mflong.htm"><kbd>MFLong</kbd></a><kbd>
+}</kbd></pre>
+
+
+<h5><b>Explanation</b></h5>
+
+<p>This node uses the indices in the coordIndex field to specify the polygonal faces.
+These indices are derived from IndexedShape. An index of -1 means the current face is
+finished and the next face is beginning.</p>
+
+<p>The vertices of these polygons, or the faces, are transformed by the current
+transformation matrix.</p>
+
+<p>Here's how the current material and normal binding are treated. The material or normal
+for each face are determined by the <a href="per_part.htm">PER_PART</a> and <a
+href="per_face.htm">PER_FACE</a> bindings. The material or normal for each vertex is
+determined by <a href="per_vert.htm">PER_VERTEX</a>. The corresponding INDEXED bindings
+are the same, but use the materialIndex or normalIndex indices. You can see the
+explanation of IndexedShape later for more information on this topic. In regard to default
+values, the DEFAULT material binding is equal to OVERALL and the DEFAULT normal binding is
+equal to <a href="pvindex.htm">PER_VERTEX_INDEXED</a>. If there aren't enough normals in
+the world's state, vertex normals will be created automatically.</p>
+
+<p>You can bind explicit texture coordinates to vertices of an indexed shape either one
+after another, if the texture coordinate binding is <a href="per_vert.htm">PER_VERTEX</a>,
+or by using the indices in the textureCoordIndex field, if the binding is <a
+href="pvindex.htm">PER_VERTEX_INDEXED</a>. Explicit texture coordinates are defined in the
+discussion of <a href="texcord2.htm">TextureCoordinate2</a>. A default texture coordinate
+mapping is created using the bounding box of the shape if a current texture is declared
+but no texture coordinates are specified. The S and T coordinates are created in the
+following manner. The longest dimension of the bounding box defines the S coordinates. The
+second longest dimension of the bounding box defines the T coordinates. The S coordinate
+can be between 0 and 1, ranging the length of the bounding box. The T coordinate can be
+between 0 and the ratio of the second greatest dimension of the bounding box to the
+greatest dimension.</p>
+
+<p>You'll need to make sure that the indices listed in the coordIndex, materialIndex,
+normalIndex, and textureCoordIndex fields are valid in relationship to the current state.
+If you don't, it is probable that you'll have errors.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/reliant.wrl">Reliant.wrl</a>.</p>
+
+<p><kbd>IndexedFaceSet { coordIndex [1224, 1276, 1364, -1,1120, 1134, 1364, -1,1276, 1361,
+1397, -1,1162, 1224, 1276, -1,1162, 1361, 1276, -1,1035, 1162, 1224, -1,951, 1035, 1166,
+-1,1035, 1166, 1224, -1,1166, 1224, 1364, -1,951, 1134, 1166, -1,1276, 1397, 1364,
+-1,1134, 1166, 1364, -1,...}</kbd></p>
+
+<h6><b>See Also</b></h6>
+
+<p><em>IndexedShape, </em><a href="mflong.htm"><em>MFLong</em></a><em>, </em><a
+href="per_part.htm"><em>PER_PART</em></a><em>, </em><a href="per_face.htm"><em>PER_FACE</em></a><em>,
+</em><a href="per_vert.htm"><em>PER_VERTEX</em></a><em>, </em><a href="pvindex.htm"><em>PER_VERTEX_INDEXED</em></a><em>,
+</em><a href="texcord2.htm"><em>TextureCoordinate2</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 22, 2001 04:49 PM<!--webbot bot="TimeStamp" endspan i-checksum="29286" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

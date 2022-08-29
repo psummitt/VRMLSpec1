@@ -1,0 +1,188 @@
+#VRML V1.0 ascii
+# Copyright (c) 1995 Paper Software, Inc.
+# Created with SkyPaper
+Separator
+{
+    DEF BackgroundColor Info {
+    string  "0.0 0.0 0.5"
+    }
+    DEF CollisionDetection Info 
+    {
+        string  "TRUE"
+    }
+
+# Setup cameras
+    DEF Cameras Switch 
+    {
+        whichChild  0
+        DEF Threshold PerspectiveCamera 
+        {
+                position    60 5 0
+                orientation 0 1 0 1.3
+        }
+        DEF Courtyard PerspectiveCamera 
+        {
+            position    20 5 -10
+            orientation 0 1 0 -4
+        }
+        DEF Exit PerspectiveCamera 
+        {
+            position    -20 5 8
+            orientation 0 1 0 1.57
+        }
+        DEF BirdsEye PerspectiveCamera 
+        {
+                position    0 50 50
+                orientation 1 0 0 -.5
+        }
+    }
+
+# Create ground and floor
+    Separator 
+    {   
+        BaseColor {
+        rgb .5 .2 .2
+        }
+        MaterialBinding {
+        value   OVERALL
+        }
+        WWWInline 
+        {
+            name        "floor.wrl"
+        }   
+    }
+
+# Create Towers
+    Separator
+    {
+        Transform 
+        {
+            translation 20 5 20
+        }
+        DEF Tower Separator 
+        {
+#            Texture2 { filename "rocks.bmp" }
+            WWWInline 
+            {
+                name        "tower.wrl"
+                bboxCenter  0 5 5
+                bboxSize    10 10 10
+                }   
+        }
+    }
+
+    Separator 
+    {
+        Transform 
+        {
+            translation 20 5 -20
+        }
+        USE Tower
+    }
+
+    Separator 
+    {
+        Transform 
+        {
+            translation -20 5 -20
+        }
+        USE Tower
+    }
+
+    Separator 
+    {
+        Transform 
+        {
+            translation -20 5 20
+        }
+        USE Tower
+    }
+
+# Create Archways
+    DEF Archways Separator 
+    {
+        Separator {
+            Transform 
+            {
+                translation -25 5 2.5
+            }
+        DEF Archway Separator
+        {
+            DEF Tower Separator 
+            {
+                Texture2 { filename "ceiling1.bmp" }
+                WWWInline 
+                {
+                    name        "archway.wrl"
+                    bboxCenter  0 5 5
+                    bboxSize    10 10 10
+                    }   
+            }
+        }
+        }
+
+        Separator 
+        {
+            Transform 
+            {
+                translation -25 5 -12.5
+            }
+            USE Archway
+        }
+    }
+
+    Separator
+    {
+        Transform 
+        {
+            translation 50 0 0
+        }
+        USE Archways
+    }
+
+# Create Walls
+    Transform 
+    {
+        translation 0 5 20
+    }
+    DEF Walls Separator
+    {
+        Texture2 { filename "house.bmp" }
+
+        DEF Wall Separator 
+        {
+            Transform 
+            {
+                scaleFactor 5 5 0
+            }
+            WWWInline 
+            {
+                name        "cube.wrl"
+            }
+        }
+
+        Texture2 { filename "house2.bmp" }
+        Transform 
+        {
+            translation 10 0 0
+        }
+        USE Wall
+
+        Texture2 { filename "astrol.bmp" }
+        Transform 
+        {
+            translation -20 0 0
+        }
+        USE Wall
+    }
+
+    Separator
+    {
+        Transform 
+        {
+            translation 0 0 -40
+        }
+
+        USE Walls
+    }
+}

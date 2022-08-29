@@ -1,0 +1,16 @@
+#VRML V1.0 ascii
+# test file for LOD (level of detail)
+
+Material { diffuseColor 0 1 0 }
+
+LOD {
+  center 0 0 0     # center of children
+  range [ 5, 10 ]  # increasing ranges
+  # for n ranges there should be n+1 children
+  # too few children: use last one
+  # too many children: ignored
+  Cube { }       # for [0, 3)
+  Sphere { }     # for [3, 5)
+  Cone { }       # for [5, inf)
+# Cylinder { }
+}

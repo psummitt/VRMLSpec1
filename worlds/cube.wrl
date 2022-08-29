@@ -1,0 +1,9 @@
+#VRML V1.0 ascii
+
+DEF Root Separator {
+    Cube {
+		width	3
+		height	2
+		depth	1
+    }
+}

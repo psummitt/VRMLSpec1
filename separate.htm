@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>Separator</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 1.1">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm">
+
+
+<h4>Separator</h4>
+
+<h5><b>Purpose</b>: The
+Separator node is one of the six group <a href="nodes.htm">Nodes</a>. This node performs a
+push, or save, of the traversal state before traversing the children. It then performs a
+pop, or a restore, after traversing them. This action isolates, or separates, the
+separator's children from the rest of the objects in the scene graph.</h5>
+
+<h5><b>Syntax</b></h5>
+
+
+<pre><kbd>CULLING ENUMS
+	ON	Always try to cull to the view volume
+	OFF	Never try to cull to the view volume
+	AUTO	Implementation-defined culling behavior
+
+FILE FORMAT/DEFAULTS
+Separator {
+	renderCulling	AUTO	# </kbd><a href="sfenum.htm"><kbd>SFEnum</kbd></a><kbd>}</kbd></pre>
+
+
+<h5><b>Explanation</b></h5>
+
+<p>A separator node can include other nodes such as lights, cameras, coordinates, normals,
+bindings, and all other properties. Separators can be used freely within scenes with
+little cost.</p>
+
+<p>These nodes also perform render culling. Render culling is a method that allows the
+node to skip over the traversal of the separator's children if they are not going to be
+rendered. This is determined by comparing the separator's bounding box with the current
+view volume. Culling itself, is then controlled by the renderCulling field. These fields
+are set to AUTO by default. This allows you to determine if the implementation should
+decide whether or not to cull.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/cubes.wrl">Cubes.wrl</a>.</p>
+
+
+<pre><kbd>Separator {</kbd></pre>
+
+
+<pre><kbd>	Transform {</kbd></pre>
+
+
+<pre><kbd>		translation	-0.01 0.016 -0.069</kbd></pre>
+
+
+<pre><kbd>		scaleFactor	1 1 0.89</kbd></pre>
+
+
+<pre><kbd>	}</kbd></pre>
+
+
+<pre><kbd>	Material {</kbd></pre>
+
+
+<pre><kbd>		ambientColor	0.08 0.1 0.06</kbd></pre>
+
+
+<pre><kbd>		diffuseColor	0.3 0.5 0.25</kbd></pre>
+
+
+<pre><kbd>		shininess	0.51</kbd></pre>
+
+
+<pre><kbd>	}</kbd></pre>
+
+
+<pre><kbd>	Cube {</kbd></pre>
+
+
+<pre><kbd>		width	0.42</kbd></pre>
+
+
+<pre><kbd>		height	0.47</kbd></pre>
+
+
+<pre><kbd>		depth	0.42</kbd></pre>
+
+
+<pre><kbd>	}</kbd></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h6><b>See Also</b></h6>
+
+<p><a href="sfenum.htm"><em>SFEnum</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 21, 2001 12:51 PM<!--webbot
+bot="TimeStamp" endspan i-checksum="29000" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+</body>
+</html>

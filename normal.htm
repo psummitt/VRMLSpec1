@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>Normal</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="Microsoft Border" content="l">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+
+<h4><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" -->
+</h4>
+
+<h5><b>Purpose</b>: This
+node is another of the eleven geometry and appearance property <a href="nodes.htm">Nodes</a>.
+Normal defines a set of three-dimensional surface normal vectors to be used by
+vertex-based shape nodes such as <a href="ifaceset.htm">IndexedFaceSet</a>, <a
+href="ilineset.htm">IndexedLinedSet</a>, or <a href="pset.htm">PointSet</a> that may
+follow the Normal node in the scene graph.</h5>
+
+<h5><b>Syntax</b></h5>
+
+<p><kbd>FILE FORMAT/DEFAULTS<br>
+Normal {<br>
+vector 0 0 1 # </kbd><a href="mfvec3f.htm"><kbd>MFVec3f</kbd></a><kbd><br>
+}</kbd></p>
+
+<h5><b>Explanation</b></h5>
+
+<p>The Normal node doesn't produce any visible results during the rendering. The Normal
+node does replace the current normals in the rendering state for other nodes that follow
+this node to use. The Normal node contains one multiple-valued field that contains the
+normal vectors.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/simple~1.wrl">Simple~1.wrl</a>.</p>
+
+<p><kbd>Normal { vector [1.000000 0.000000 0.000000,1.000000 0.000000 0.000000,-1.000000
+0.000000 0.000000,-1.000000 0.000000 0.000000,0.000000 -1.000000 0.000000,0.000000
+0.000000 1.000000,...}</kbd></p>
+
+<h6><b>See Also</b></h6>
+
+<p><a href="ifaceset.htm"><em>IndexedFaceSet</em></a><em>, </em><a href="ilineset.htm"><em>IndexedLineSet</em></a><em>,
+</em><a href="mfvec3f.htm"><em>MFVec3f</em></a><em>, </em><a href="pset.htm"><em>PointSet</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 22, 2001 04:49 PM<!--webbot bot="TimeStamp" endspan i-checksum="29286" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

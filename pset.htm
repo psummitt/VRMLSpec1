@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>PointSet</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 1.1">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm">
+
+
+<h4>PointSet</h4>
+
+<h5><b>Purpose</b>: This
+node is one of the eight shape <a href="nodes.htm">Nodes</a> that specify the geometry of
+the object. PointSet creates a set of points located at the current coordinates. The node
+uses the current coordinates in order. This is accomplished by beginning at the index
+specified by the startIndex field.</h5>
+
+<h5><b>Syntax</b></h5>
+
+
+<pre><kbd>FILE FORMAT/DEFAULTS
+PointSet {
+	startIndex	0	# </kbd><a href="sflong.htm"><kbd>SFLong</kbd></a><kbd>
+	numPoints	-1	# </kbd><a href="sflong.htm"><kbd>SFLong</kbd></a></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h5><b>Explanation</b></h5>
+
+<p>The number of points in the set defined by the PointSet node is determined by the value
+in the numPoints field. If you place a value of -1 in this field it indicates that all
+remaining values in the current coordinates are to be used as points.</p>
+
+<p>The current cumulative transformation transforms the coordinates of the point. The
+points in the set are drawn with the current material and texture.</p>
+
+<p>The current material and normal binding are treated in the following ways. One material
+or normal is bound to each point by <a href="per_part.htm">PER_PART</a>, <a
+href="per_face.htm">PER_FACE</a>, and <a href="per_vert.htm">PER_VERTEX</a> bindings. <a
+href="overall.htm">OVERALL</a> is the <a href="default.htm">DEFAULT</a> material binding. <a
+href="per_vert.htm">PER_VERTEX</a> is the <a href="default.htm">DEFAULT</a> normal
+binding. Materials, normals, or texture coordinates use the startIndex when the binding
+indicates that they are to be used per vertex.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/allnodes.wrl">Allnodes.wrl</a>.</p>
+
+
+<pre><kbd>PointSet {</kbd></pre>
+
+
+<pre><kbd>	startIndex	0</kbd></pre>
+
+
+<pre><kbd>	numPoints	-1</kbd></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h6><b>See Also</b></h6>
+
+<p><a href="default.htm"><em>DEFAULT</em></a><em>, </em><a href="overall.htm"><em>OVERALL</em></a><em>,
+</em><a href="per_face.htm"><em>PER_FACE</em></a><em>, </em><a href="per_part.htm"><em>PER_PART</em></a><em>,
+</em><a href="per_vert.htm"><em>PER_VERTEX</em></a><em>, </em><a href="sflong.htm"><em>SFLong</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 21, 2001 12:51 PM<!--webbot
+bot="TimeStamp" endspan i-checksum="29000" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>ShapeHints</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 1.1">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm">
+
+
+<h4>ShapeHints</h4>
+
+<h5><b>Purpose</b>: This
+node is another of the eleven geometry and appearance property <a href="nodes.htm">Nodes</a>.
+The ShapeHints node determines whether IndexedFaceSets are solid, contain ordered
+vertices, or contain convex faces.</h5>
+
+<h5><b>Syntax</b></h5>
+
+
+<pre><kbd>VERTEX ORDERING ENUMS
+	UNKNOWN_ORDERING	Ordering of vertices is unknown
+	CLOCKWISE		Face vertices are ordered clockwise
+				(from the outside)
+	COUNTERCLOCKWISE	Face vertices are ordered counterclockwise
+				(from the outside)
+</kbd>
+<kbd>SHAPE TYPE ENUMS
+	UNKNOWN_SHAPE_TYPE	Nothing is known about the shape
+	SOLID			The shape encloses a volume
+
+FACE TYPE ENUMS
+	UNKNOWN_FACE_TYPE	Nothing is known about faces
+	CONVEX			All faces are convex
+</kbd>
+<kbd>FILE FORMAT/DEFAULTS
+ShapeHints {
+	vertexOrdering	UNKNOWN_ORDERING	# </kbd><a href="sfenum.htm"><kbd>SFEnum</kbd></a><kbd>
+	shapeType	UNKNOWN_SHAPE_TYPE	# </kbd><a href="sfenum.htm"><kbd>SFEnum</kbd></a><kbd>
+	faceType	CONVEX			# </kbd><a href="sfenum.htm"><kbd>SFEnum</kbd></a><kbd>
+	creaseAngle	0.5			# </kbd><a href="sffloat.htm"><kbd>SFFloat</kbd></a><kbd>
+}</kbd></pre>
+
+
+<h5><b>Explanation</b></h5>
+
+<p>The ShapeHints node provides information that allows VRML to optimize certain rendering
+features. These optimizations include enabling back-face culling and disabling two-sided
+lighting. For example, if an object is solid and has ordered vertices, this node may turn
+on backface culling and turn off two-sided lighting. On the other hand, if the object is
+not solid but has ordered vertices, the node may turn off backface culling and turn on
+two-sided lighting.</p>
+
+<p>Another point, this node also affects how default normals are generated. When an <a
+href="ifaceset.htm">IndexedFaceSet </a>is required to generate default normals, it will
+use the creaseAngle field to determine which edges should be smooth- shaded and which ones
+should have a sharp crease. A crease angle is defined as the angle between surface normals
+on adjacent polygons. For example, a crease angle of 0.5 radians means that an edge
+between two adjacent polygonal faces will be smooth shaded if the normals to the two faces
+form an angle that is less than 0.5 radians. The default value for the crease angle is 0.5
+radians or about thirty degrees. Otherwise, the edge between the two adjacent polygonal
+faces will be faceted.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/allnodes.wrl">Allnodes.wrl</a>.</p>
+
+
+<pre><kbd>ShapeHints {</kbd></pre>
+
+
+<pre><kbd>	vertexOrdering	UNKNOWN_ORDERING</kbd></pre>
+
+
+<pre><kbd>	shapeType	UNKNOWN_SHAPE_TYPE</kbd></pre>
+
+
+<pre><kbd>	faceType	CONVEX</kbd></pre>
+
+
+<pre><kbd>	creaseAngle	0.5</kbd></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h6><b>See Also</b></h6>
+
+<p><a href="ifaceset.htm"><em>IndexedFaceSet</em></a><em>, </em><a href="sfenum.htm"><em>SFEnum</em></a><em>,
+</em><a href="sffloat.htm"><em>SFFloat</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 21, 2001 12:51 PM<!--webbot
+bot="TimeStamp" endspan i-checksum="29000" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+</body>
+</html>

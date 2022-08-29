@@ -1,0 +1,10 @@
+#VRML V1.0 ascii
+
+DEF Root Separator {
+
+    Cylinder {
+		parts  ALL
+		radius	0.8
+		height	3
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>WWWInline</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm">
+<h4><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" --></h4>
+
+<h5><b>Purpose</b>: This
+node is the unclassified node in the specification. The WWWInline node reads its children
+from anywhere in the World Wide Web.</h5>
+
+<p><kbd>FILE FORMAT/DEFAULTS</kbd></p>
+
+
+<pre><kbd>WWWInline {</kbd></pre><pre><kbd>	name		&quot;&quot;	# </kbd><a href="sfstring.htm"><kbd>SFString</kbd></a></pre><pre><kbd>	bboxSize	0 0 0	# </kbd><a href="sfvec3f.htm"><kbd>SFVec3f</kbd></a></pre><pre><kbd>	bboxCenter	0 0 0	# </kbd><a href="sfvec3f.htm"><kbd>SFVec3f</kbd></a></pre><pre><kbd>}</kbd></pre>
+
+
+<h5><b>Explanation</b></h5>
+
+<p>Exactly when WWWInLine's children are read is not defined. The reading of the children
+may be delayed until the WWWInline is actually displayed. A WWWInline with an empty name
+(&quot;&quot;) does nothing. The WWWInLine name field is an arbitrary URL.</p>
+
+<p>The effect of referring to a non-VRML URL in a WWWInline node is undefined.</p>
+
+<p>If the WWWInline's bboxSize field specifies a non-empty bounding box, then the node's
+object-space bounding box is determined by its bboxSize and bboxCenter fields. Keep in
+mind that a bounding box is non-empty when at least one of its dimensions is greater than
+zero. This allows an implementation to view-volume cull or LOD switch the WWWInline
+without reading its contents.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/fworld1.wrl">FWorld1.wrl</a>.</p>
+
+
+<pre><kbd>DEF NoName_1 WWWInline {</kbd></pre><pre><kbd>	name		&quot;main000.wrl&quot;</kbd></pre><pre><kbd>	bboxSize	5.425 3.401 3.223</kbd></pre><pre><kbd>	bboxCenter	2.713 1.662 0.599</kbd></pre><pre><kbd>}</kbd></pre>
+
+
+<h6><b>See Also</b></h6>
+
+<p><a href="sfstring.htm"><em>SFString</em></a><em>, </em><a href="sfvec3f.htm"><em>SFVec3f</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 21, 2001 12:51 PM<!--webbot bot="TimeStamp" endspan i-checksum="29000" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+</body>
+</html>

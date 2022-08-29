@@ -1,0 +1,18 @@
+#VRML V1.0 ascii
+DEF Paper50x50Floor Separator {
+Coordinate3 {
+	point	[ 50  0  50,	
+		 -50  0  50,	
+		 -50  0 -50,	
+		  50  0 -50 ]	
+}
+
+TextureCoordinate2 {
+	point	[ 25 25, 25 0, 0 0, 0 25 ]
+}
+
+IndexedFaceSet 
+{
+	coordIndex [ 3, 2, 1, 0, -1]
+} 
+}

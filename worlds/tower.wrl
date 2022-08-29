@@ -1,0 +1,68 @@
+#VRML V1.0 ascii
+# Copyright (c) 1995 Paper Software, Inc.
+Separator 
+{ 
+    Separator {  
+        Separator {
+        
+            Texture2 { filename "tex27.bmp" }
+
+            Transform 
+            {
+                scaleFactor 5 5 5
+            }
+            WWWInline 
+            {
+                name        "cube.wrl"
+            }   
+        }    
+                              
+        Separator {                              
+            Transform 
+            {
+                scaleFactor 5 5 5
+                translation 0 10 0
+            }
+            Texture2 { filename "tex28.bmp" }
+            WWWInline 
+            {
+                name        "cube.wrl"
+            }   
+        }    
+                         
+        Separator {                         
+            Transform 
+            {
+                scaleFactor 5 5 5
+                translation 0 20 0
+            }
+            Texture2 { filename "tex25.bmp" }
+            WWWInline 
+            {
+                name        "cube.wrl"
+            }   
+        }    
+    
+        Transform
+        {
+            translation 0 30 0
+        }
+        
+        Separator {
+         
+            BaseColor {
+            rgb .7 .7 0
+            }
+            MaterialBinding {
+            value   OVERALL
+            }
+         
+            Cone
+            {
+                bottomRadius 5
+                height 10
+            }
+        }    
+
+    }
+}

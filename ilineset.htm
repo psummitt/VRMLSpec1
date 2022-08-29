@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>IndexedLineSet</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="Microsoft Border" content="l">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+
+<h4><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" -->
+</h4>
+
+<h5><b>Purpose</b>: This
+node is another of the nodes that make up the shape <a href="nodes.htm">Nodes</a> group.
+It represents a 3D shape created by constructing polylines from vertices located at the
+currently specified coordinates. The indices in the coordIndex field are used to specify
+the polylines. An index of -1 tells when the current polyline has ended and the next one
+is beginning.</h5>
+
+<h5><b>Syntax</b></h5>
+
+
+<pre><kbd>FILE FORMAT/DEFAULTS
+	IndexedLineSet {
+		coordIndex		 0	# </kbd><a href="mflong.htm"><kbd>MFLong</kbd></a><kbd>
+		materialIndex		-1	# </kbd><a href="mflong.htm"><kbd>MFLong</kbd></a><kbd>
+		normalIndex		-1	# </kbd><a href="mflong.htm"><kbd>MFLong</kbd></a><kbd>
+		textureCoordIndex	-1	# </kbd><a href="mflong.htm"><kbd>MFLong</kbd></a><kbd>
+}</kbd></pre>
+
+
+<h5><b>Explanation</b></h5>
+
+<p>The current cumulative transformation is used to transform the coordinates of the line
+set.</p>
+
+<p>The current material and normal binding are treated in the following ways. The material
+or normal for each segment of the line is specified by the <a href="per_part.htm">PER_PART
+</a>binding. The material or normal for each polyline is specified by the <a
+href="per_face.htm">PER_FACE</a> binding. The material or normal for each vertex is
+specified by <a href="per_vert.htm">PER_VERTEX</a>. The corresponding _INDEXED bindings
+are the same. You will need to use the materialIndex or normalIndex indices, though. The <a
+href="mbinding.htm#DEFAULT">DEFAULT</a> material binding is equal to <a
+href="mbinding.htm#OVERALL">OVERALL</a> and the <a href="mbinding.htm#DEFAULT">DEFAULT</a>
+normal binding is equal to <a href="pvindex.htm">PER_VERTEX_INDEXED</a>. If there aren't
+enough normals defined in the world state, the lines will be drawn unlit. The same rules
+are used for texture coordinate generation as <a href="ifaceset.htm">IndexedFaceSet </a>explained
+previously.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/allnodes.wrl">Allnodes.wrl</a>.</p>
+
+
+<pre><kbd>IndexedLineSet {</kbd></pre>
+
+
+<pre><kbd>	coordIndex [ 0 ]</kbd></pre>
+
+
+<pre><kbd>	materialIndex [ -1 ]</kbd></pre>
+
+
+<pre><kbd>	normalIndex [ -1 ]</kbd></pre>
+
+
+<pre><kbd>	textureCoordIndex [ -1 ]</kbd></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h6><b>See Also</b></h6>
+
+<p><a href="ifaceset.htm"><em>IndexedFaceSet</em></a><em>, </em><a href="mflong.htm"><em>MFLong</em></a><em>,
+</em><a href="per_part.htm"><em>PER_PART</em></a><em>, </em><a href="per_face.htm"><em>PER_FACE</em></a><em>,
+</em><a href="per_vert.htm"><em>PER_VERTEX</em></a><em>, </em><a href="pvindex.htm"><em>PER_VERTEX_INDEXED</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 22, 2001 04:49 PM<!--webbot bot="TimeStamp" endspan i-checksum="29286" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>NormalBinding</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="Microsoft Border" content="l">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+
+<h4><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" -->
+</h4>
+
+<h5><b>Purpose</b>: The
+NormalBinding node is another of the eleven geometry and appearance property <a
+href="nodes.htm">Nodes</a>. This node determines how the current normals are bound to
+shapes that follow this node in the scene graph. Keep in mind that each shape node may
+interpret bindings differently.</h5>
+
+<h5><b>Syntax</b></h5>
+
+<p><kbd>BINDINGS</kbd></p>
+
+
+<pre><kbd>	</kbd><a href="default.htm"><kbd>DEFAULT</kbd></a><kbd>			Use default binding</kbd></pre>
+
+
+<pre><kbd>	</kbd><a href="overall.htm"><kbd>OVERALL</kbd></a><kbd>			Whole object has same normal</kbd></pre>
+
+
+<pre><kbd>	</kbd><a href="per_part.htm"><kbd>PER_PART</kbd></a><kbd>			One normal for each part of object</kbd></pre>
+
+
+<pre><kbd>	</kbd><a href="ppindex.htm"><kbd>PER_PART_INDEXED</kbd></a><kbd>		One normal for each part, indexed</kbd></pre>
+
+
+<pre><kbd>	</kbd><a href="per_face.htm"><kbd>PER_FACE</kbd></a><kbd>			One normal for each face of object</kbd></pre>
+
+
+<pre><kbd>	</kbd><a href="pfindex.htm"><kbd>PER_FACE_INDEXED</kbd></a><kbd>		One normal for each face, indexed</kbd></pre>
+
+
+<pre><kbd>	</kbd><a href="per_vert.htm"><kbd>PER_VERTEX</kbd></a><kbd>		One normal for each vertex of object</kbd></pre>
+
+
+<pre><kbd>	</kbd><a href="pvindex.htm"><kbd>PER_VERTEX_INDEXED</kbd></a><kbd>		One normal for each vertex, indexed</kbd></pre>
+
+
+<p>&nbsp; </p>
+
+
+<pre><kbd>FILE FORMAT/DEFAULTS</kbd></pre>
+
+
+<pre><kbd>NormalBinding {</kbd></pre>
+
+
+<pre><kbd>	value	</kbd><a href="default.htm"><kbd>DEFAULT</kbd></a><kbd>	# </kbd><a
+href="sfenum.htm"><kbd>SFEnum</kbd></a></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<pre><b>Explanation</b></pre>
+
+
+<p>As we suggested earlier, bindings for faces and vertices are only meaningful for shapes
+made from faces and vertices. In the same way, indexed bindings are only used by shapes
+that allow indexing. If you have bindings that require multiple normals, make sure that
+you have defined at least as many normals as are necessary. If you don't, you will have
+errors in your world.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from one of the many <a href="worlds/cube.wrl">cube.wrl</a>
+files available.</p>
+
+<p><kbd>NormalBinding {</kbd></p>
+
+
+<pre><kbd>	value	PER_FACE</kbd></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h6><b>See Also</b></h6>
+
+<p><a href="sfenum.htm"><em>SFEnum</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 22, 2001 04:49 PM<!--webbot bot="TimeStamp" endspan i-checksum="29286" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

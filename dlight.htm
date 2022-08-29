@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>DirectionalLight</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="Microsoft Border" content="l">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+
+<h4><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" -->
+</h4>
+
+<h5><b>Purpose</b>: This
+node is one of the three nodes in the Lights subgroup of the Property <a href="nodes.htm">Nodes</a>.
+It defines a directional light source that illuminates objects falling inside of rays
+parallel to a given 3-dimensional vector.</h5>
+
+<h5><b>Syntax</b></h5>
+
+
+<pre><kbd>FILE FORMAT/DEFAULTS
+DirectionalLight {
+	on		TRUE 	# </kbd><a href="sfbool.htm"><kbd>SFBool</kbd></a><kbd>
+	intensity	1	# </kbd><a href="sffloat.htm"><kbd>SFFloat</kbd></a><kbd>
+	color		1 1 1	# </kbd><a href="sfcolor.htm"><kbd>SFColor</kbd></a><kbd>
+	direction	0 0 -1	# </kbd><a href="sfvec3f.htm"><kbd>SFVec3f</kbd></a><kbd>
+}</kbd></pre>
+
+
+<h5><b>Explanation</b></h5>
+
+<p>A DirectionalLight node, as with other light nodes, defines an illumination source that
+may affect subsequent shapes in the scene graph. This node is affected by the current
+transformation. One item you should pay special attention to is that a DirectionalLight
+node under a separator will not affect any objects you may have placed outside that
+separator.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/allnodes.wrl">Allnodes.wrl</a>.</p>
+
+
+<pre><kbd>DirectionalLight {</kbd></pre>
+
+
+<pre><kbd>	on		True</kbd></pre>
+
+
+<pre><kbd>	intensity	0.8</kbd></pre>
+
+
+<pre><kbd>	color		1 1 1</kbd></pre>
+
+
+<pre><kbd>	direction	0 0 -1</kbd></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h6><b>See Also</b></h6>
+
+<p><a href="plight.htm"><em>PointLight</em></a><em>, </em><a href="slight.htm"><em>SpotLight</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 22, 2001 04:49 PM<!--webbot bot="TimeStamp" endspan i-checksum="29286" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

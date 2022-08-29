@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>MaterialBinding</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="Microsoft Border" content="l">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+
+<h4><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" -->
+</h4>
+
+<h5><b>Purpose</b>: This
+node is another of the eleven geometry and appearance property <a href="nodes.htm">Nodes</a>.
+Material Binding specifies how the current materials are bound to shapes that follow the
+node in the scene graph.</h5>
+
+<h5><b>Syntax</b></h5>
+
+
+<pre><kbd>BINDINGS</kbd></pre>
+
+
+<pre><kbd>	</kbd><a href="default.htm"><kbd>DEFAULT	</kbd></a><kbd>		Use default binding</kbd></pre>
+
+
+<pre><kbd>	</kbd><a href="overall.htm"><kbd>OVERALL</kbd></a><kbd>			Whole object has same material</kbd></pre>
+
+
+<pre><kbd>	</kbd><a href="per_part.htm"><kbd>PER_PART</kbd></a><kbd>			One material for each part of object</kbd></pre>
+
+
+<pre><kbd>	</kbd><a href="ppindex.htm"><kbd>PER_PART_INDEXED</kbd></a><kbd>		One material for each part, indexed</kbd></pre>
+
+
+<pre><kbd>	</kbd><a href="per_face.htm"><kbd>PER_FACE</kbd></a><kbd>			One material for each face of object</kbd></pre>
+
+
+<pre><kbd>	</kbd><a href="pfindex.htm"><kbd>PER_FACE_INDEXED</kbd></a><kbd>		One material for each face, indexed</kbd></pre>
+
+
+<pre><kbd>	</kbd><a href="per_vert.htm"><kbd>PER_VERTEX</kbd></a><kbd>		One material for each vertex of object</kbd></pre>
+
+
+<pre><kbd>	</kbd><a href="pvindex.htm"><kbd>PER_VERTEX_INDEXED</kbd></a><kbd>		One material for each vertex, indexed</kbd></pre>
+
+
+<p>&nbsp; </p>
+
+
+<pre><kbd>FILE FORMAT/DEFAULTS</kbd></pre>
+
+
+<pre><kbd>	MaterialBinding {</kbd></pre>
+
+
+<pre><kbd>		value	</kbd><a href="mbinding.htm#DEFAULT"><kbd>DEFAULT</kbd></a><kbd>	# </kbd><a
+href="sfenum.htm"><kbd>SFEnum</kbd></a></pre>
+
+
+<pre><kbd>	}</kbd></pre>
+
+
+<h5><b>Explanation</b></h5>
+
+<p>Shape node may interpret bindings differently from one another. The way that materials
+are handled is relatively simple. The current material always has a base value. This value
+is defined by the first value of all material fields. As material fields are capable of
+having multiple values, this MaterialBinding node determines how these values are
+distributed over a 3-D object.</p>
+
+<p>Keep in mind that bindings for faces and vertices are meaningful only for shapes made
+from faces and vertices. In the same manner, indexed bindings are only used by shapes
+allowing indexing.</p>
+
+<p>When this happens with multiple material values, these values are cycled through. The
+cycle is based on the period of the material component with the most values. For example,
+Table 13-1 shows the values used when cycling through, or indexing into, a material with 2
+ambient colors, 3 diffuse colors, and 1 of all other components in the current material.
+This material has a period cycle of three.</p>
+
+<blockquote>
+  <p><strong>Table: Material Values</strong></p>
+  <div align="center"><center><table border="5" cellspacing="1" width="75%">
+      <tr>
+        <td width="25%"><cite>Material</cite></td>
+        <td width="25%"><cite>Ambient color</cite></td>
+        <td width="25%"><cite>Diffuse color </cite></td>
+        <td width="25%"><cite>Other</cite></td>
+      </tr>
+      <tr>
+        <td width="25%"><code>0</code></td>
+        <td width="25%">0</td>
+        <td width="25%">0</td>
+        <td width="25%">0</td>
+      </tr>
+      <tr>
+        <td width="25%">1</td>
+        <td width="25%">1</td>
+        <td width="25%">1</td>
+        <td width="25%">0</td>
+      </tr>
+      <tr>
+        <td width="25%">2</td>
+        <td width="25%">1</td>
+        <td width="25%">2</td>
+        <td width="25%">0</td>
+      </tr>
+      <tr>
+        <td width="25%">3</td>
+        <td width="25%">0</td>
+        <td width="25%">0</td>
+        <td width="25%">0</td>
+      </tr>
+    </table>
+    </center></div><p><cite>(*Notice 3 is the same as 0*)</cite></p>
+</blockquote>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/calig4.wrl">Calig4.wrl</a>.</p>
+
+<p><kbd>MaterialBinding {value PER_FACE_INDEXED}</kbd></p>
+
+<h6><b>See Also</b></h6>
+
+<p><a href="material.htm"><em>Material</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 22, 2001 04:49 PM<!--webbot bot="TimeStamp" endspan i-checksum="29286" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

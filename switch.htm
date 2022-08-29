@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>Switch</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 1.1">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm">
+
+
+<h4>Switch</h4>
+
+<h5><b>Purpose</b>: This
+node is another of the six group <a href="nodes.htm">Nodes</a>. Switch usually traverses
+only one, none, or all of its children. One use you might make of this node is to switch
+on and off the effects of some properties or you might use it to switch between different
+properties.</h5>
+
+<h5><b>Syntax</b> </h5>
+
+
+<pre><kbd>FILE FORMAT/DEFAULTS
+Switch {
+	whichChild	-1	# </kbd><a href="sflong.htm"><kbd>SFLong</kbd></a></pre>
+
+
+<p><kbd>}</kbd></p>
+
+<h5><b>Explanation</b></h5>
+
+<p>Which child will be traversed is determined by the whichChild field. This field
+specifies the index of the child to traverse. The first child will have an index of 0.</p>
+
+<p>The default value for the whichChild field is -1. This value means that none of the
+children will be traversed. The switch will behave just like a regular <a href="group.htm">Group</a>,
+traversing all children, if the value is set to -3 traverses all children.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/allnodes.wrl">Allnodes.wrl</a>.</p>
+
+<p><kbd>Switch {whichChild -1}</kbd></p>
+
+<h6><b>See Also</b></h6>
+
+<p><a href="group.htm"><em>Group</em></a><em>, </em><a href="sflong.htm"><em>SFLong</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 21, 2001 12:51 PM<!--webbot
+bot="TimeStamp" endspan i-checksum="29000" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+</body>
+</html>

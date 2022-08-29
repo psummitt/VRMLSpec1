@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>LOD</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="Microsoft Border" content="l">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+
+<h4><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" -->
+</h4>
+
+<h5><b>Purpose</b>: This
+node is another one of the six grouping <a href="nodes.htm">Nodes</a>. LOD is used to
+allow the worlds you build to change from one representation of an object to another
+automatically. The child nodes specified in this node usually represent the same object or
+objects at varying levels of detail, from highest detail to lowest. But this is not always
+the case.</h5>
+
+<h5><b>Syntax</b></h5>
+
+
+<pre><kbd>FILE FORMAT/DEFAULTS
+LOD {
+	range	[ ]	# </kbd><a href="mffloat.htm"><kbd>MFFloat</kbd></a><kbd>
+	center	0 0 0	# </kbd><a href="sfvec3f.htm"><kbd>SFVec3f</kbd></a><kbd>}</kbd></pre>
+
+
+<h5><b>Explanation</b></h5>
+
+<p>The LOD's center, as defined in the format syntax above is changed by the current
+transformation of your VRML world. The distance from this newly transformed center to the
+view point is calculated. If this distance is less than the first value in the ranges
+array, then the first child of the LOD group is drawn. If the distance is between the
+first and second values in the ranges array, the second child is drawn. This continues as
+long as there are ranges in the ranges array and there are children to be drawn. There is
+an important consideration to keep in mind when using this technique. If you have placed N
+values in your ranges array, your LOD group should have N+1 children. If you specify too
+few children, the last child will be used repeatedly for the lowest levels of detail. On
+the other hand, if you specify too many children, these extra children will be ignored.
+Each value in the ranges array should be less than the previous value. If they aren't, the
+results of this technique will be undefined.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/i_tower.wrl">I_tower.wrl</a>.</p>
+
+
+<pre><kbd>LOD {</kbd></pre>
+
+
+<pre><kbd>	range [8, 14, 22, 34]</kbd></pre>
+
+
+<pre><kbd>	Separator {</kbd></pre>
+
+
+<pre><kbd>		MaterialBinding {</kbd></pre>
+
+
+<pre><kbd>			value OVERALL}</kbd></pre>
+
+
+<pre><kbd>		Material { ...</kbd></pre>
+
+
+<pre><kbd>		}</kbd></pre>
+
+
+<pre><kbd>	}</kbd></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 22, 2001 04:49 PM<!--webbot bot="TimeStamp" endspan i-checksum="29286" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

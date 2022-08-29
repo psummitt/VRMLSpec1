@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>TextureCoordinate2</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 1.1">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm">
+
+
+<h4>TextureCoordinate2</h4>
+
+<h5><b>Purpose</b>: This
+node is another of the eleven geometry and appearance property <a href="nodes.htm">Nodes</a>.
+This node defines a set of two-dimensional coordinates that will be used to map textures
+to any vertex-based <a href="pset.htm">PointSet</a>, <a href="ilineset.htm">IndexedLineSet</a>,
+or <a href="ifaceset.htm">IndexedFaceSet</a> objects that follow it in the scene graph.</h5>
+
+<h5><b>Syntax</b> </h5>
+
+<p><kbd>FILE FORMAT/DEFAULTS</kbd></p>
+
+<p><kbd>TextureCoordinate2 {point 0 0 # </kbd><a href="mfvec2f.htm"><kbd>MFVec2f</kbd></a><kbd>}</kbd></p>
+
+<h5><b>Explanation</b></h5>
+
+<p>TextureCoordinate2 will replace the current texture coordinates in the rendering state
+for the shapes to use.</p>
+
+<p>Texture coordinates will be between 0 and 1 and will range across the texture. The
+horizontal coordinate is always specified first followed by the vertical coordinate. The
+horizontal coordinate is named S. The vertical coordinate is named T.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/floor.wrl">Floor.wrl</a>.</p>
+
+<p><kbd>TextureCoordinate2 {point [ 25 25, 25 0, 0 0, 0 25 ]}</kbd></p>
+
+<h6><b>See Also</b></h6>
+
+<p><a href="mfvec2f.htm"><em>MFVec2f</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 21, 2001 12:51 PM<!--webbot
+bot="TimeStamp" endspan i-checksum="29000" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+</body>
+</html>

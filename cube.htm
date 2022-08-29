@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>Cube</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="Microsoft Border" content="l">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+
+<h4><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" -->
+</h4>
+
+<h5><b>Purpose</b>: This
+node is another of the shape <a href="nodes.htm">Nodes</a>. This node provides you with a
+cuboid aligned with the coordinate axes. The default for the cube node centered it at
+(0,0,0) and measures two units in each dimension, from -1 to +1.</h5>
+
+<h5><b>Syntax</b></h5>
+
+<p><kbd>FILE FORMAT/DEFAULTS<br>
+Cube {<br>
+width 2 # </kbd><a href="sffloat.htm"><kbd>SFFloat</kbd></a><kbd><br>
+height 2 # </kbd><a href="sffloat.htm"><kbd>SFFloat</kbd></a><kbd><br>
+depth 2 # </kbd><a href="sffloat.htm"><kbd>SFFloat</kbd></a><kbd><br>
+}</kbd></p>
+
+<h5><b>Explanation</b></h5>
+
+<p>You can change the width, height, and depth variables to achieve different sized
+objects.</p>
+
+<p>As with some of the previously discussed nodes, transformation of the cube node is
+performed by the scene graph's current cumulative transformation. It is also drawn with
+the scene graph's current <a href="material.htm">Material</a> and texture.</p>
+
+<p>In the scene graph, if the current material binding is <a href="per_part.htm">PER_PART</a>,
+<a href="ppindex.htm">PER_PART_INDEXED</a>, <a href="per_face.htm">PER_FACE</a>, or <a
+href="pfindex.htm">PER_FACE_INDEXED</a>, materials will be bound to the individual faces
+of the cube in the following order: front (+Z), back (-Z), left (-X), right (+X), top
+(+Y), and bottom (-Y). If you have trouble visualizing this, remember how the left-handed
+coordinate system works. +Z will be into the screen and -Z will be out of the screen
+toward you. -X is to the left, +X to the right, +Y toward the top of the screen, and -Y
+toward the bottom.</p>
+
+<p>In must the same way, textures are applied individually to each face of the cube. Keep
+in mind that the entire texture will be applied on each face. On the front (-Z), back
+(+Z), right (+X), and left (-X) sides of the cube, the texture will be applied right side
+up. On the top (+Y), the texture will appear right side up if you tilt the top of the cube
+toward your viewpoint. On the bottom (-Y), the texture appears right side up when the top
+of the cube is tilted toward the -Z axis, or away from your viewpoint. Please keep in mind
+that these material, texture, and material binding transformations are applied to the
+object at it's initial 3-D coordinate location.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from one of the many <a href="worlds/cube.wrl">Cube .wrl</a>
+files available.</p>
+
+
+<pre><kbd>Cube {	width 3</kbd></pre>
+
+
+<pre><kbd>	height 2</kbd></pre>
+
+
+<pre><kbd>	depth 1}</kbd></pre>
+
+
+<h6><b>See Also</b></h6>
+
+<p><a href="per_part.htm"><em>PER_PART</em></a><em>, </em><a href="ppindex.htm"><em>PER_PART_INDEXED</em></a><em>,
+</em><a href="per_face.htm"><em>PER_FACE</em></a><em>, </em><a href="pfindex.htm"><em>PER_FACE_INDEXED</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 22, 2001 04:49 PM<!--webbot bot="TimeStamp" endspan i-checksum="29286" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

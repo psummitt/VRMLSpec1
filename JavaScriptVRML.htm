@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE>JavaScript VRML Scene</TITLE>
+<script language="JavaScript">
+<!-- hide from legacy browsers
+
+function vrmlScene() {
+	vrml = open("", "displayWindow", "width=500,height=400,status=yes,toolbar=yes.menubar=yes");
+	
+	// open document for further output
+	vrml.document.open("x-world/x-vrml");
+	
+	vr=vrml.document;
+	
+	// create VRML-scene
+	vr.writeln("#VRML V1.0 ascii");
+	
+	// Light
+	vr.write("Separator { DirectionalLight { ");
+	vr.write("direction 3 -1 -2.5 } ");
+	
+	// Camera
+	vr.write("PerspectiveCamera { position -8.6 2.1 5.6 ");
+	vr.write("orientation -0.1352 -0.9831 -0.1233 1.1417 ");
+	vr.write("focalDistance 10.84 } ");
+	
+	// Cube
+	vr.write("Separator { Material {diffuseColor 0 0 1 } ");
+	vr.write("Transform { translation -2.4 .2 1 rotation 0 0.5 1 .9 } ");
+	vr.write ("Cube {} } }");
+	
+	// Close the document but not the window
+	vrml.document.close();
+}
+
+// -->
+</script>
+
+</HEAD>
+<BODY>
+
+<form>
+<input type=button value="VRML on-the-fly" onClick="vrmlScene()">
+</form>
+
+</BODY>
+</HTML>

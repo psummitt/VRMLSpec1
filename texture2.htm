@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>Texture2</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 1.1">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm">
+
+
+<h4>Texture2</h4>
+
+<h5><b>Purpose</b>: This
+node is another of the eleven geometry and appearance property <a href="nodes.htm">Nodes</a>.
+The Texture2 node determines a texture map and then defines parameters for that map. It is
+this map that all subsequent shapes will be referred to as they are being rendered.</h5>
+
+<h5><b>Syntax</b> </h5>
+
+
+<pre><kbd>WRAP	ENUM</kbd></pre>
+
+
+<pre><kbd>REPEAT	Repeats texture outside 0-1 texture coordinate range</kbd></pre>
+
+
+<pre><kbd>CLAMP	Clamps texture coordinates to lie within 0-1 range
+</kbd></pre>
+
+
+<pre><kbd>FILE FORMAT/DEFAULTS</kbd></pre>
+
+
+<pre><kbd>Texture2 {</kbd></pre>
+
+
+<pre><kbd>	filename	&quot;&quot;	# </kbd><a href="sfstring.htm"><kbd>SFString</kbd></a></pre>
+
+
+<pre><kbd>	image		0 0 0	# </kbd><a href="sfimage.htm"><kbd>SFImage</kbd></a></pre>
+
+
+<pre><kbd>	wrapS		REPEAT	# </kbd><a href="sfenum.htm"><kbd>SFEnum</kbd></a></pre>
+
+
+<pre><kbd>	wrapT		REPEAT	# </kbd><a href="sfenum.htm"><kbd>SFEnum</kbd></a></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h5><b>Explanation</b></h5>
+
+<p>Using this node, a texture can be read from the URL listed by the filename field.
+Setting the filename field to an empty string (&quot;&quot;) turns off the texturing.</p>
+
+<p>Another way you can specify a texture you want is to set the image field to contain the
+texture data. Make sure you don't specify both a URL and data inline. This will result in
+undefined behavior in your world.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/tower.wrl">Tower.wrl</a>.</p>
+
+<p><kbd>Texture2 { filename &quot;tex27.bmp&quot; }</kbd></p>
+
+<h6><b>See Also</b></h6>
+
+<p><a href="sfenum.htm"><em>SFEnum</em></a><em>, </em><a href="sfimage.htm"><em>SFImage</em></a><em>,
+</em><a href="sfstring.htm"><em>SFString</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 21, 2001 12:51 PM<!--webbot
+bot="TimeStamp" endspan i-checksum="29000" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+</body>
+</html>

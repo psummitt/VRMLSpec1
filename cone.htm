@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>Cone</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="Microsoft Border" content="l">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+
+<h5><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" -->
+</h5>
+
+
+<h5><b>Purpose</b>: This
+node is one of the shape <a href="nodes.htm">Nodes</a>. It provides you with a simple cone
+to use in your worlds. The central axis of this node is aligned along the y-axis. The
+default location for the cone is centered at (0,0,0). The cone has a size of -1 to +1 in
+all three directions. The cone has a radius of 1 at the bottom and a height of 2, with its
+apex at 1. There are two parts for the cone. These two parts are the sides and the bottom.</h5>
+
+<h5><b>Syntax</b></h5>
+
+<p><kbd>PARTS<br>
+SIDES The conical part<br>
+BOTTOM The bottom circular face<br>
+ALL All parts<br>
+</kbd><br>
+<kbd>FILE FORMAT/DEFAULTS<br>
+Cone {<br>
+parts ALL # </kbd><a href="sfbmask.htm"><kbd>SFBitMask</kbd></a><kbd><br>
+bottomRadius 1 # </kbd><a href="sffloat.htm"><kbd>SFFloat</kbd></a><kbd><br>
+height 2 # </kbd><a href="sffloat.htm"><kbd>SFFloat</kbd></a><kbd><br>
+}</kbd></p>
+
+<h5><b>Explanation</b></h5>
+
+<p>This node is transformed by the parent's current cumulative transformation. It is also
+drawn with the parent's current texture and material.</p>
+
+<p>Unless the current material binding is <a href="per_part.htm">PER_PART </a>or <a
+href="ppindex.htm">PER_PART_INDEXED</a>, the first current material is used for the entire
+cone. Under these circumstances, the first current material is used for the sides of the
+cone, and the second is used for the bottom.</p>
+
+<p>If a texture is applied to a cone, the texture is applied differently to the sides and
+bottom. For the sides, the texture will wraps counterclockwise starting at the back of the
+cone. This counterclockwise direction is determined by looking at the cone from above. The
+texture will have a vertical seam along the back of the cone and will intersect the
+yz-plane. The base of the cone is covered by a circle that is cut out of the texture
+square and applied to the base. When the top of the cone is rotated toward the negative z
+axis, the texture will appear right side up.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/cone.wrl">Cone.wrl</a>.</p>
+
+
+<pre><kbd>Cone {	parts 		ALL</kbd></pre>
+
+
+<pre><kbd>	bottomRadius 	1</kbd></pre>
+
+
+<pre><kbd>	height 		3}</kbd></pre>
+
+
+<h6><b>See Also</b></h6>
+
+<p><a href="per_part.htm"><em>PER_PART</em></a><em>, </em><a href="ppindex.htm"><em>PER_PART_INDEXED</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 22, 2001 04:49 PM<!--webbot bot="TimeStamp" endspan i-checksum="29286" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

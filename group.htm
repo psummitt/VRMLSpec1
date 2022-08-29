@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>Group</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="Microsoft Border" content="l">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+
+<h4><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" -->
+</h4>
+
+<h5><b>Purpose</b>: As
+one of the grouping nodes, this node defines the base class for all group <a
+href="nodes.htm">Nodes</a>. This node contains an ordered list of child nodes.</h5>
+
+<h5><b>Syntax</b></h5>
+
+
+<pre><kbd>FILE FORMAT/DEFAULTS
+Group {
+}</kbd></pre>
+
+
+<h5><b>Explanation</b></h5>
+
+<p>The Group node provides a container for the child nodes contained within it. It does
+not alter the traversal state in any way, shape, or form. State accumulated for a child
+during the traversal is passed on to each successive child and then to the parents of the
+group. Keep in mind that Group does not push or pop traversal state in the same manner as
+Separator does.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/1ribbons.wrl">1Ribbons.wrl</a>.</p>
+
+
+<pre><kbd>Group {</kbd></pre>
+
+
+<pre><kbd>	Separator {</kbd></pre>
+
+
+<pre><kbd>		MaterialBinding {</kbd></pre>
+
+
+<pre><kbd>		value	OVERALL</kbd></pre>
+
+
+<pre><kbd>		}</kbd></pre>
+
+
+<pre><kbd>		Material {</kbd></pre>
+
+
+<pre><kbd>			ambientColor 0.2 0.2 0.2~</kbd></pre>
+
+
+<pre><kbd>			diffuseColor 1 0.327273 0</kbd></pre>
+
+
+<pre><kbd>			specularColor 0 0 0 ~</kbd></pre>
+
+
+<pre><kbd>			shininess 0.2 ~</kbd></pre>
+
+
+<pre><kbd>			transparency 0 ~</kbd></pre>
+
+
+<pre><kbd>		}</kbd></pre>
+
+
+<pre><kbd>		Coordinate4 { ...</kbd></pre>
+
+
+<pre><kbd>		}</kbd></pre>
+
+
+<pre><kbd>	}</kbd></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h6><b>See Also</b></h6>
+
+<p><a href="separate.htm"><em>Separator</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 22, 2001 04:49 PM<!--webbot bot="TimeStamp" endspan i-checksum="29286" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

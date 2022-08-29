@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>SFImage</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 1.1">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm">
+
+
+<h4>SFImage</h4>
+
+<h5><b>Purpose</b>:
+SFImage is a single-value field that is found in the <a href="texture2.htm">Texture2</a>
+node. This field contains an uncompressed 2-dimensional color or greyscale image.</h5>
+
+<h5><b>Explanation</b></h5>
+
+<p>This field is written as three integers representing the width, height, and number of
+components in the image. This is followed by a number of hexadecimal values representing
+the pixels in the image. This number of hexadecimal values is determined by the formula
+width * height. This is all separated by whitespace.</p>
+
+<p>A one-component image will have a one-byte hexadecimal value representing the intensity
+of the image. For example, 0xFF represents full intensity while 0x00 signifies no
+intensity.</p>
+
+<p>A two-component image puts the intensity in the first, or high, byte and the
+transparency in the second, or low, byte.</p>
+
+<p>Pixels in a three-component image have the red component in the first byte, followed by
+the green and blue components. Red would therefore be 0xFF0000.</p>
+
+<p>Four component images put the transparency byte after the red/green/blue. A
+semi-transparent blue would be 0x0000FF80.</p>
+
+<p>A value of 1.0 is completely transparent and a value of 0.0 is completely opaque. Keep
+in mind that each pixel is read as a single unsigned number. This means that a 3-component
+pixel with value &quot;0x0000FF&quot; can also be written as &quot;0xFF&quot; or
+&quot;255.&quot;</p>
+
+<h5><b>Examples</b></h5>
+
+<p><kbd>1 1 1 0xFF 0x00</kbd></p>
+
+<p>This represents a one pixel wide by two pixel high greyscale image, with the bottom
+pixel white and the top pixel black.</p>
+
+<p><kbd>2 4 3 0xFF0000 0xFF00 0 0 0 0 0xFFFFFF 0xFFFF00</kbd></p>
+
+<p>This represents a two pixel wide by four pixel high RGB image, with the bottom left
+pixel red, the bottom right pixel green, the two middle rows of pixels black, the top left
+pixel white, and the top right pixel yellow.</p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 21, 2001 12:51 PM<!--webbot
+bot="TimeStamp" endspan i-checksum="29000" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+</body>
+</html>

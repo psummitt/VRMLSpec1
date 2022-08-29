@@ -1,0 +1,111 @@
+#VRML V1.0 ascii
+#Inventor V2.0 ascii
+
+WWWAnchor {
+  name "http://www.sd.tgs.com/~template/vrml/stuff.wrl"
+
+  ### Make everything bigger
+  Scale {
+    scaleFactor 64 64 64
+    }
+
+  ### Green Sphere thing
+  Separator {
+    Transform {
+      translation  0.00   0.00   0.00
+      scaleFactor  1.00   1.00   1.00
+      }
+    Material {
+      ambientColor 0.08 0.10 0.06
+      diffuseColor 0.30 0.50 0.25
+      shininess	0.80
+      }
+    Sphere {}
+    }
+
+  ### Red Flat thing
+  Separator {
+    Transform {
+      translation  0.00   0.00   32.00
+      scaleFactor  8.00   8.00   8.00
+      }
+    Material {
+      ambientColor 0.08 0.10 0.06
+      diffuseColor 0.90 0.20 0.6
+      shininess	1.0
+      }
+    Cube {
+      width  1.0
+      height 1.0
+      depth  1.0
+      }
+    }
+
+  ### Yellow Flat thing
+  Separator {
+    Transform {
+      translation  0.00  32.00   0.00
+      scaleFactor  8.00   8.00   8.00
+      }
+    Material {
+      ambientColor 0.08 0.10 0.06
+      diffuseColor 0.60 0.90 0.20
+      shininess	1.0
+      }
+    Cube {
+      width  1.0
+      height 1.0
+      depth  1.0
+      }
+    }
+
+  ### Blue Flat thing
+  Separator {
+    Transform {
+      translation 32.00   0.00   0.00
+      scaleFactor  8.00   8.00   8.00
+      }
+    Material {
+      ambientColor 0.08 0.10 0.06
+      diffuseColor 0.60 0.20 0.90
+      shininess	1.0
+      }
+    Cube {
+      width  1.0
+      height 1.0
+      depth  1.0
+      }
+    }
+
+  Separator {	# Wall geometry; just three flat polygons
+    Transform {
+      scaleFactor  8.00   1.00   8.00
+      }
+    Coordinate3 {
+      point[
+         64 64 64,  64 64 -64,  64 -64 64,  64 -64 -64,
+        -64 64 64, -64 64 -64, -64 -64 64, -64 -64 -64]
+      }
+    Separator {
+      Material {
+        ambientColor 3 3 3
+        diffuseColor 0 0 0
+        shininess	0
+        }
+      IndexedFaceSet {
+        coordIndex[4, 5, 1, 0, -1]
+        }
+      }
+    Separator {
+      Material {
+        ambientColor 0 0 0
+        diffuseColor 0 0 0
+        shininess	1
+        }
+      IndexedFaceSet {
+        coordIndex[2, 3, 7, 6, -1]
+        }
+      }
+    }
+
+  }

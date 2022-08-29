@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>WWWAnchor</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 1.1">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm">
+
+
+<h4>WWWAnchor</h4>
+
+<h5><b>Purpose</b>: One
+of the most valuable nodes available for cyberspace navigation, the WWWAnchor node loads a
+new scene into your VRML browser when one of the node's children is chosen.</h5>
+
+<h5><b>Syntax</b> </h5>
+
+<p><kbd>FILE FORMAT/DEFAULTS</kbd></p>
+
+
+<pre><kbd>WWWAnchor {</kbd></pre>
+
+
+<pre><kbd>	name	&quot;&quot;	# </kbd><a href="sfstring.htm"><kbd>SFString</kbd></a></pre>
+
+
+<pre><kbd>	map	NONE	# </kbd><a href="sfenum.htm"><kbd>SFEnum</kbd></a></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h5><b>Explanation</b></h5>
+
+<p>Exactly how you &quot;choose&quot; a child of the WWWAnchor is up to your VRML browser.
+The method, typically, involves clicking on one of the node's children with the mouse.
+This results in the new scene replacing the current scene. Choosing a WWWAnchor with an
+empty (&quot;&quot;) name does nothing. The WWWAnchor name field is an arbitrary URL.</p>
+
+<p>The WWWAnchor's map field is an enumerated value. You have two choices for this value,
+either the default, NONE , or POINT. If POINT is chosen the object-space coordinates of
+the point on the object the user will choose will be added to the URL in the name field.
+The syntax for this addition is &quot;?x,y,z&quot;.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/fworld1.wrl">FWorld1.wrl</a>.</p>
+
+<p><kbd>WWWAnchor {name &quot;http://www.sd.tgs.com/~template/vrml/stuff.wrl&quot;...}</kbd></p>
+
+<h6><b>See Also</b></h6>
+
+<p><a href="sfvec3f.htm"><em>SFVec3f</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 21, 2001 12:51 PM<!--webbot
+bot="TimeStamp" endspan i-checksum="29000" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>Cylinder</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="Microsoft Border" content="l">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+
+<h4><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" -->
+</h4>
+
+<h5><b>Purpose</b>: The
+cylinder node is another of the shape <a href="nodes.htm">Nodes</a>. It provides you with
+a primitive object known as simple capped cylinder. The cylinder is centered around the
+y-axis. The default for this node has the cylinder centered at (0,0,0) with a size of -1
+to +1 in all three dimensions. You can change the radius and height field variables to
+create cylinders with different sizes.</h5>
+
+<h5><b>Syntax</b></h5>
+
+<p><kbd>PARTS<br>
+SIDES The cylindrical part<br>
+TOP The top circular face<br>
+BOTTOM The bottom circular face<br>
+ALL All parts<br>
+<br>
+FILE FORMAT/DEFAULTS<br>
+Cylinder {<br>
+parts ALL # </kbd><a href="sfbmask.htm"><kbd>SFBitMask</kbd></a><kbd><br>
+radius 1 # </kbd><a href="sffloat.htm"><kbd>SFFloat</kbd></a><kbd><br>
+height 2 # </kbd><a href="sffloat.htm"><kbd>SFFloat</kbd></a><kbd><br>
+}</kbd></p>
+
+<h5><b>Explanation</b></h5>
+
+<p>As with other nodes of this type, the cylinder is transformed by the current cumulative
+transformation and drawn with the current material and texture.</p>
+
+<p>If the current material binding is not <a href="per_part.htm">PER_PART</a> or <a
+href="ppindex.htm">PER_PART_INDEXED</a>, the first material is used for the entire
+cylinder. If the material binding is one of these two, the first current material is used
+for the sides of the cylinder, the second is used for the top, and the third is used for
+the bottom.</p>
+
+<p>When applying textures to a cylinder, the texture is applied in different ways to the
+sides, the top, and the bottom. For the sides, the texture will wrap in a counterclockwise
+direction, as you look at it from above, starting at the back of the cylinder. The texture
+will have a vertical seam along the back side of the cylinder, intersecting the yz-plane.</p>
+
+<p>For the top and bottom, as with the cone node, a circle will be cut out of the texture
+square and applied to the top or bottom circle. The top texture will appear right side up
+when the top of the cylinder is tilted toward the +Z axis, or away from your viewpoint.
+The bottom texture will appear right side up when the top of the cylinder is tilted toward
+the -Z axis, or toward your viewpoint.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/cyl.wrl">Cyl.wrl</a>.</p>
+
+
+<pre><kbd>Cylinder {	parts ALL</kbd></pre>
+
+
+<pre><kbd>		radius 0.8</kbd></pre>
+
+
+<pre><kbd>		height 3}</kbd></pre>
+
+
+<h6><b>See Also</b></h6>
+
+<p><a href="per_part.htm"><em>PER_PART</em></a><em>, </em><a href="ppindex.htm"><em>PER_PART_INDEXED</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 22, 2001 04:49 PM<!--webbot bot="TimeStamp" endspan i-checksum="29286" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

@@ -1,0 +1,34 @@
+#VRML V1.0 ascii
+Separator 
+{
+	DEF Corner Separator 
+	{
+		DEF PaperCube Separator {
+    		Transform 
+    		{
+			translation 5 5 0
+			rotation 1 1 0 3.14
+			scaleFactor 10 1 10
+   		}
+		WWWInline 
+		{
+			name		"cube.wrl"
+			bboxCenter	0 5 5
+			bboxSize	10 10 10
+	    	}	
+		}
+		Separator {
+	    	Transform 
+		{
+			translation 0 5 -5
+			rotation 0 1 1 3.14
+		}
+		WWWInline 
+		{
+			name		"cube.wrl"
+			bboxCenter	0 5 5
+			bboxSize	10 10 10
+	    	}	
+		}
+	}
+}

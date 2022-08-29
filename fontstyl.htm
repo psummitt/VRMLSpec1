@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>FontStyle</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="Microsoft Border" content="l">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+
+<h4><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" -->
+</h4>
+
+<h5><b>Purpose</b>: This
+node is one of the eleven geometry and appearance subgroup <a href="nodes.htm">Nodes</a>
+in the Property node group. It is used to define the current font style to be used for all
+subsequent AsciiText.</h5>
+
+<h5><b>Syntax</b></h5>
+
+
+<pre><kbd><strong>FAMILY</strong></kbd></pre>
+
+
+<pre><kbd>SERIF		Serif style (such as TimesRoman)</kbd></pre>
+
+
+<pre><kbd>SANS 		Sans Serif Style (such as Helvetica)</kbd></pre>
+
+
+<pre><kbd>TYPEWRITER 	Fixed pitch style (such as Courier)</kbd></pre>
+
+
+<pre><kbd><strong>STYLE</strong></kbd></pre>
+
+
+<pre><kbd>NONE 		No modifications to family</kbd></pre>
+
+
+<pre><kbd>BOLD 		Embolden family</kbd></pre>
+
+
+<pre><kbd>ITALIC 		Italicize or Slant family</kbd></pre>
+
+
+<pre><kbd><strong>FILE FORMAT/DEFAULTS</strong></kbd></pre>
+
+
+<pre><kbd>FontStyle {</kbd></pre>
+
+
+<pre><kbd>	size	10	# </kbd><a href="sffloat.htm"><kbd>SFFloat</kbd></a></pre>
+
+
+<pre><kbd>	family	SERIF	# </kbd><a href="sfenum.htm"><kbd>SFEnum</kbd></a></pre>
+
+
+<pre><kbd>	style	NONE	# </kbd><a href="sfbmask.htm"><kbd>SFBitMask</kbd></a></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h5><b>Explanation</b></h5>
+
+<p>Keep in mind that only the font attributes are defined. The specific browser you are
+using is expected to assign specific fonts to the various attribute combinations. As
+explained earlier, the size field specifies the height (in object space units) of glyphs
+rendered. Again, it also determines the vertical spacing of any adjacent lines of text </p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/allnodes.wrl">Allnodes.wrl</a>.</p>
+
+
+<pre><kbd>FontStyle {</kbd></pre>
+
+
+<pre><kbd>	Size	10</kbd></pre>
+
+
+<pre><kbd>	family	SERIF</kbd></pre>
+
+
+<pre><kbd>	style	NONE</kbd></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h6><b>See Also</b></h6>
+
+<p><a href="asciitxt.htm"><em>AsciiText</em></a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 22, 2001 04:49 PM<!--webbot bot="TimeStamp" endspan i-checksum="29286" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>VRML Simplified</title>
+</head>
+
+<body>
+  <img src="images/label.gif" width="250" height="86">
+  <h1 align="center">VRML Specification Version 1.0 Simplified</h1>
+  <p>This Web page is an adaptation of Chapter 13 from our book</p>
+  <p><img src="https://res.cloudinary.com/dhfzm8v7y/image/upload/v1656712915/images/Creating_Cool_3D_Web_Worlds_with_VRML-504x640_zltxwu.png" width="110" height="138">
+     
+  </p>
+  <p>Here, we are going to go through each and every component of the VRML Version 1.0
+Specification, explaining how it works in layman's terms, and providing you with examples
+of how that particular command or component is used. You'll also find links to various
+example and tutorials that we have created here at this location.</p>
+  <ul>
+    <li><a href="vrmltest.htm">Example page</a> from <a
+    href="../SummittNewMedia/SNMVRE/CC3DVRML.htm"><em>Creating Cool Interactive Web Sites</em></a>
+    demonstrating Microsoft Internet Explorer with Microsoft's VRML add-in. 
+    </li>
+  </ul>
+  <p>We'll begin by looking at the section labeled language basics. Here the discussion
+concerns what makes up the virtual world created using VRML.</p>
+
+
+<table border="2" cellpadding="2" width="100%">
+  <tr>
+    <td width="50%"><a href="syntax.htm">General VRML File Syntax</a> </td>
+    <td width="50%"><a href="nodes.htm">Nodes</a> </td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="database.htm">The Scene Database</a> </td>
+    <td width="50%"><a href="nodesynt.htm">Node Syntax</a> </td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="graph.htm">The Scene Graph</a> </td>
+    <td width="50%"><a href="fields.htm">Fields</a></td>
+  </tr>
+</table>
+
+
+<h2>Node and Field
+Descriptions</h2>
+
+<h6>We're now ready to
+discuss each of the nodes and fields in detail explaining their purpose, syntax, defaults,
+examples uses, and other nodes or fields that you should examine in context with it. These
+nodes and fields will be discussed in alphabetical order.</h6>
+
+
+<table border="2" cellpadding="2" width="100%">
+  <tr>
+    <td width="20%"><h6><a href="asciitxt.htm">AsciiText</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="material.htm">Material</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="per_face.htm">PER_FACE</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="sfbool.htm">SFBool</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="slight.htm">SpotLight</a>
+      </h6>
+      </td>
+  </tr>
+  <tr>
+    <td width="20%"><h6><a href="cone.htm">Cone</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="mbinding.htm">MaterialBinding</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="pfindex.htm">PER_FACE_INDEXED</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="sfcolor.htm">SFColor
+      </a></h6>
+      </td>
+    <td width="20%"><h6><a href="switch.htm">Switch
+      </a></h6>
+      </td>
+  </tr>
+  <tr>
+    <td width="20%"><h6><a href="coord3.htm">Coordinate3</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="mtform.htm">MatrixTransform</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="per_part.htm">PER_PART</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="sfenum.htm">SFEnum</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="texture2.htm">Texture2</a>
+      </h6>
+      </td>
+  </tr>
+  <tr>
+    <td width="20%"><h6><a href="cube.htm">Cube</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="mfcolor.htm">MFColor</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="ppindex.htm">PER_PART_INDEXED</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="sffloat.htm">SFFloat</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="tex3tran.htm">Texture2Transform
+      </a></h6>
+      </td>
+  </tr>
+  <tr>
+    <td width="20%"><h6><a href="cylinder.htm">Cylinder</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="mffloat.htm">MFFloat</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="per_vert.htm">PER_VERTEX</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="sfimage.htm">SFImage</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="texcord2.htm">TextureCoordinate2</a>
+      </h6>
+      </td>
+  </tr>
+  <tr>
+    <td width="20%"><h6><a href="default.htm">Default</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="mflong.htm">MFLong</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="pvindex.htm">PER_VERTEX_INDEXED</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="sflong.htm">SFLong
+      </a></h6>
+      </td>
+    <td width="20%"><h6><a href="transfrm.htm">Transform
+      </a></h6>
+      </td>
+  </tr>
+  <tr>
+    <td width="20%"><h6><a href="dlight.htm">DirectionalLight</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="mfstring.htm">MFString</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="pcamera.htm">PerspectiveCamera</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="sfmatrix.htm">SFMatrix
+      </a></h6>
+      </td>
+    <td width="20%"><h6><a href="transep.htm">TransformSeparator
+      </a></h6>
+      </td>
+  </tr>
+  <tr>
+    <td width="20%"><h6><a href="fontstyl.htm">FontStyle</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="mfvec2f.htm">MFVec2f</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="plight.htm">PointLight</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="sfrotate.htm">SFRotation</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="translat.htm">Translation
+      </a></h6>
+      </td>
+  </tr>
+  <tr>
+    <td width="20%"><h6><a href="group.htm">Group</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="mfvec3f.htm">MFVec3f</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="pset.htm">PointSet</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="sfstring.htm">SFString
+      </a></h6>
+      </td>
+    <td width="20%"><h6><a href="w3anchor.htm">WWWAnchor</a>
+      </h6>
+      </td>
+  </tr>
+  <tr>
+    <td width="20%"><h6><a href="ifaceset.htm">IndexedFaceSet</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="normal.htm">Normal</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="rotate.htm">Rotation</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="sfvec2f.htm">SFVec2f
+      </a></h6>
+      </td>
+    <td width="20%"><h6><a href="w3inline.htm">WWWInline</a>
+      </h6>
+      </td>
+  </tr>
+  <tr>
+    <td width="20%"><h6><a href="ilineset.htm">IndexedLineSet</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="nbinding.htm">NormalBinding</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="scale.htm">Scale</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="sfvec3f.htm">SFVec3f</a>
+      </h6>
+      </td>
+    <td width="20%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="20%"><h6><a href="info.htm">Info</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="ocamera.htm">OrthographicCamera</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="separate.htm">Separator</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="shaphint.htm">ShapeHints
+      </a></h6>
+      </td>
+    <td width="20%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="20%"><h6><a href="lod.htm">LOD</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="overall.htm">OVERALL
+      </a></h6>
+      </td>
+    <td width="20%"><h6><a href="sfbmask.htm">SFBitMask</a>
+      </h6>
+      </td>
+    <td width="20%"><h6><a href="sphere.htm">Sphere</a>
+      </h6>
+      </td>
+    <td width="20%">&nbsp;</td>
+  </tr>
+</table>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>This page last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 21, 2001 12:51 PM<!--webbot bot="TimeStamp" endspan i-checksum="29000" -->.</i> </p>
+
+<p align="center"><i>These pages Copyright �1996, VREvolution</i>. </p>
+
+</body>
+</html>

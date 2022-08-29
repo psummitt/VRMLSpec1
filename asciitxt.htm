@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
+
+<head>
+<title>AsciiText</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="Microsoft Border" content="l">
+</head>
+
+<body stylesrc="../VRMLSpec1/Default.htm"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+
+<h5><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
+B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" -->
+</h5>
+
+
+<h5><b>Purpose</b>:</h5>
+
+<h6>This node is one of
+the eight shape <a href="nodes.htm">Nodes</a>. Use this node to display text in the VRML
+world. This node allows for the representation of text string characters from the ASCII
+coded character set to be displayed on the screen.</h6>
+
+<h5><b>Syntax</b></h5>
+
+<p><kbd>JUSTIFICATION</kbd></p>
+
+<p><kbd>LEFT Align left edge of text to origin LEFT (the default) places the left edge of
+each string at x=0.</kbd></p>
+
+<p><kbd>CENTER Align center of text to origin. CENTER places the center of each string at
+x=0.</kbd></p>
+
+<p><kbd>RIGHT Align right edge of text to origin. RIGHT places the right edge of each
+string at x=0.</kbd></p>
+
+<p>&nbsp;</p>
+
+<p><kbd>FILE FORMAT/DEFAULTS</kbd></p>
+
+<p><kbd>AsciiText {</kbd></p>
+
+
+<pre><kbd>	string		&quot;&quot;	# </kbd><a href="mfstring.htm"><kbd>MFString</kbd></a></pre>
+
+
+<pre><kbd>	spacing		1	# </kbd><a href="sffloat.htm"><kbd>SFFloat</kbd></a></pre>
+
+
+<pre><kbd>	justification	LEFT	# </kbd><a href="sfenum.htm"><kbd>SFEnum</kbd></a></pre>
+
+
+<pre><kbd>	width		0	# </kbd><a href="mffloat.htm"><kbd>MFFloat</kbd></a></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h5><b>Explanation</b></h5>
+
+<p><b>string:</b> This is the group of characters you wish displayed</p>
+
+<p><b>spacing:</b> The first string, or group of characters, is rendered with its baseline
+at (0,0,0). All of the strings that follow are advanced along the y-axis by the formula
+-(size * spacing). Size is specified by the height (in object space units) of the glyphs
+rendered. This determines the vertical spacing of the adjacent lines of text.</p>
+
+<p><b>justification:</b> This field determines the where the strings will be placed along
+the x-axis. The character string is rendered from left to right, top to bottom in the font
+set by <a href="fontstyl.htm">FontStyle</a>.</p>
+
+<p><b>width</b>: This field defines a suggested width constraint for each string. The
+default, 0, is to use the natural width of each string.</p>
+
+<p>The character string is transformed according to the current cumulative transformation
+of the parent node. The string is drawn with the current material and texture.</p>
+
+<p>The texture begins at the origin of the first string, as determined by the current
+justification. The texture is then scaled in both S and T dimensions equally. The font
+height represents one unit. S increases to the right. The origin of T can occur anywhere
+along each character of the string depending on how that specific character's outline is
+defined.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/allnodes.wrl">Allnodes.wrl</a>.</p>
+
+
+<pre><kbd>AsciiText {</kbd></pre>
+
+
+<pre><kbd>	string		[ &quot;Hello&quot;, &quot;there&quot; ]</kbd></pre>
+
+
+<pre><kbd>	spacing		1</kbd></pre>
+
+
+<pre><kbd>	justification	LEFT</kbd></pre>
+
+
+<pre><kbd>	width		0</kbd></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h6><b>See Also</b></h6>
+
+<p><a href="fontstyl.htm">FontStyle</a></p>
+
+
+
+
+
+
+<hr>
+
+<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
+s-format="%B %d, %Y %I:%M %p" startspan -->July 22, 2001 04:49 PM<!--webbot bot="TimeStamp" endspan i-checksum="29286" -->.</i></p>
+
+<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+
+<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+</html>
