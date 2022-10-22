@@ -1,19 +1,44 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Nodes</title>
-<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
-<meta name="Microsoft Border" content="l">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nodes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </head>
-
-<body stylesrc="../VRMLSpec1/Default.htm"><!--msnavigation--><table dir="ltr" border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
-
-
-<h4><!--webbot bot="Navigation" S-Type="banner" S-Rendering S-Orientation
-B-Include-Home B-Include-Up U-Page S-Target startspan --><!--webbot bot="Navigation" endspan i-checksum="0" -->
-</h4>
-
-<p>As we stated earlier, and as is stated in the VRML Version 1.0 specification, VRML
+<body>
+<header>
+  <nav class="navbar navbar-expand bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.htm"><h3>VRML Specification Version 1.0 Simplified</h3></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<section class="container">
+    <h2>Nodes</h2>
+    <hr>
+    <p>As we stated earlier, and as is stated in the VRML Version 1.0 specification, VRML
 defines several different classes of nodes. There are thirty-six nodes in their various
 groupings. We're going to discuss these nodes in very general terms at this point. Each
 node will be discussed fully later on these Web pages.</p>
@@ -29,7 +54,7 @@ are <a href="asciitxt.htm">AscciiText</a>, <a href="cone.htm">Cone</a>, <a href=
 href="ilineset.htm">IndexedLineSet</a>, <a href="pset.htm">PointSet</a>, and <a
 href="sphere.htm">Sphere</a>. Basically, these nodes define what the object to be drawn
 is. </p>
-
+<hr>
 <p>The second major grouping of nodes is the property nodes. Property nodes affect the way
 the objects in the 3-D world are drawn. There are four subgroups in this grouping. These
 group these nodes into geometry and appearance, matrix or transformation, cameras, and
@@ -53,7 +78,7 @@ and <a href="pcamera.htm">PerspectiveCamera</a>.</p>
 <p>Finally, in the Lights subgroup there are three nodes. These nodes are <a
 href="dlight.htm">DirectionalLight</a>, <a href="plight.htm">PointLight</a>, and <a
 href="slight.htm">SpotLight</a>.</p>
-
+<hr>
 <p>The third major grouping is the group nodes. Grouping nodes are used to group, or
 collect, other nodes together. This allows for these groups, or collections, of nodes to
 be handled as single objects. These grouping nodes are also used to control when child
@@ -70,20 +95,15 @@ during rendering. The parent can have no children or many.</p>
 <a href="transep.htm">TransformSeparator</a>, and <a href="w3anchor.htm">WWWAnchor</a>.</p>
 
 <p>The one unclassified node is <a href="w3inline.htm">WWWInline</a>.</p>
-
-
-
-
-
-
+</section>
 <hr>
 
-<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
-s-format="%B %d, %Y %I:%M %p" startspan -->July 22, 2001 04:49 PM<!--webbot bot="TimeStamp" endspan i-checksum="29286" -->.</i></p>
+<footer>
+<p align="center"><i>This page has been updated for this posting on October 21, 2020 8:19 AM.</i> </p>
 
-<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+<p align="center"><i>These pages &#169;1996, &#169;2022 Paul M. Summitt</i>. </p>
 
-<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
-
-<!--msnavigation--></td></tr><!--msnavigation--></table></body>
+<p><a href="./Index.htm">Return</a> </p>
+</footer>
+</body>
 </html>
