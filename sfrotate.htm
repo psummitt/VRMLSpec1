@@ -1,22 +1,60 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>SFRotation</title>
-<meta name="GENERATOR" content="Microsoft FrontPage 1.1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SFRotation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </head>
+<body>
+<header>
+  <nav class="navbar navbar-expand bg-light">
+	<div class="container-fluid">
+	  <a class="navbar-brand" href="Index.htm"><h3>VRML Specification Version 1.0 Simplified</h3></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+	  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+		<ul class="nav navbar-nav">
+		  <li class="nav-item">
+			<a class="nav-link active" href="syntax.htm">General Syntax</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="nodes.htm">Nodes</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="database.htm">Scene Database</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="nodesynt.htm">Node Syntax</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="graph.htm">Scene Graph</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="fields.htm">Fields</a>
+		  </li>
+		</ul>
+	  </div>
+	</div>
+  </nav>
+  <center><img src="images/label.gif" width="250" height="86"></center>
+<hr>
 
-<body stylesrc="../VRMLSpec1/Default.htm">
-
-
-<h4>SFRotation</h4>
+</header>
+<section class="container">
+<h2>SFRotation</h2>
+<hr>
 
 <h5><b>Purpose</b>:
-SFRotation is a single-value field found in the <a href="ocamera.htm">OrthographicCamera</a>,
+<p>SFRotation is a single-value field found in the <a href="ocamera.htm">OrthographicCamera</a>,
 <a href="pcamera.htm">PerspectiveCamera</a>, <a href="rotate.htm">Rotation</a>, and <a
 href="transfrm.htm">Transform</a> <a href="nodes.htm">Nodes</a>. This field contains an
 arbitrary rotation. The SFRotation field is written as four floating point values
 separated by whitespace. These four floating point values represent the axis of rotation
-followed by the amount of right-handed rotation about that axis, in radians.</h5>
+followed by the amount of right-handed rotation about that axis, in radians.</p>
 
 <h5><b>Example</b></h5>
 
@@ -24,20 +62,15 @@ followed by the amount of right-handed rotation about that axis, in radians.</h5
 
 <p>This example describes a 180 degree rotation about the Y axis.</p>
 
-
-
-
-
-
+</section>
 <hr>
 
-<p align="center"><i>These pages last updated <!--webbot bot="TimeStamp" s-type="EDITED"
-s-format="%B %d, %Y %I:%M %p" startspan -->July 21, 2001 12:51 PM<!--webbot
-bot="TimeStamp" endspan i-checksum="29000" -->.</i></p>
+<footer>
+<p align="center"><i>This page has been updated for this posting on October 21, 2020 8:19 AM.</i> </p>
 
-<p align="center"><i>Copyright ©1996, VREvolution</i>.</p>
+<p align="center"><i>These pages &#169;1996, &#169;2022 Paul M. Summitt</i>. </p>
 
-<p><a href="../VRMLSpec1/Default.htm">Return</a> </p>
-
+<p><a href="./Index.htm">Return</a> </p>
+</footer>
 </body>
 </html>

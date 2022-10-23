@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SFString</title>
+  <title>Texture2Transform</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <script async src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </head>
@@ -45,25 +45,61 @@
 
 </header>
 <section class="container">
-<h2>SFString</h2>
+<h2>Texture2Transform</h2>
 <hr>
-<h5><b>Purpose</b>:</h5>
-<p>SFString is a single-value field found in the <a href="asciitxt.htm">AsciiText</a>, <a
-href="w3inline.htm">WWWInLine</a> and <a href="info.htm">Info</a> <a href="nodes.htm">Nodes</a>.
-SFString contains a sequence of characters known as an ASCII string. The SFString field is
-written as a sequence of ASCII characters in double quotes. The quotes are optional if the
-string doesn't contain any whitespace. Any type of character, including newlines, may
-appear within the quotes. You can even include a double quote character within the string
-by preceding it with a backslash.</p>
 
-<h5><b>Example</b></h5>
+<h5><b>Purpose</b>: </h5>
+	<p>This node is another of the geometry and appearance property <a href="nodes.htm">Nodes</a>.
+Texture2Transform sets up a two-dimensional transformation applied to texture coordinates.</p>
 
-<p><kbd>Testing<br>
-&quot;One, Two, Three&quot;</kbd></p>
+<h5><b>Syntax</b> </h5>
 
-<p><kbd>&quot;He said, \&quot;Immel did it!\&quot;&quot;</kbd></p>
 
-<p>All three of the above are valid strings.</p>
+<pre><kbd>FILE FORMAT/DEFAULTS
+Texture2Transform {
+	translation	0 0	# </kbd><a href="sfvec2f.htm"><kbd>SFVec2f</kbd></a><kbd>
+	rotation	0	# </kbd><a href="sffloat.htm"><kbd>SFFloat</kbd></a><kbd>
+	scaleFactor	1 1	# </kbd><a href="sfvec2f.htm"><kbd>SFVec2f</kbd></a><kbd>
+	center		0 0	# </kbd><a href="sfvec2f.htm"><kbd>SFVec2f</kbd></a></pre>
+
+
+<p><kbd>}</kbd></p>
+
+<h5><b>Explanation</b></h5>
+
+<p>The Texture2Transform node changes the way textures will be applied to the surfaces of
+shapes that will come later in the scene graph. Possible changes include a non-uniform
+scale about an arbitrary center point, a rotation about that same point, and a
+translation. These three possible transformations are listed in the order in which they
+can occur. This node allows you to change the size and position of the textures on shapes
+if you wish.</p>
+
+<p><b>Example Use</b></p>
+
+<p>The following code fragment is from <a href="worlds/allnodes.wrl">Allnodes.wrl</a>.</p>
+
+
+<pre><kbd>Texture2Transform {</kbd></pre>
+
+
+<pre><kbd>	translation	0 0</kbd></pre>
+
+
+<pre><kbd>	rotation	0</kbd></pre>
+
+
+<pre><kbd>	scaleFactor	1 1</kbd></pre>
+
+
+<pre><kbd>	center		0 0</kbd></pre>
+
+
+<pre><kbd>}</kbd></pre>
+
+
+<h6><b>See Also</b></h6>
+
+<p><a href="sffloat.htm"><em>SFFloat</em></a><em>, </em><a href="sfvec2f.htm"><em>SFVec2f</em></a></p>
 
 </section>
 <hr>
